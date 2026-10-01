@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cinzel, Inter } from "next/font/google";
+import Script from "next/script";
 
 import { ScrollTopButton } from "@/components/layout/ScrollTopButton";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
   formatDetection: { telephone: false, address: false, email: false },
+  verification: { google: "wkmWGRgRgpas484J0hUNVdMOfMv3n8PrEooM_OdkGyI" },
   openGraph: {
     type: "website",
     siteName: siteConfig.name,
@@ -68,6 +70,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={siteConfig.language} className={`${display.variable} ${sans.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-ink-950 font-sans antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E58PYY2YNJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E58PYY2YNJ');`}
+        </Script>
         <a
           href="#main"
           className="sr-only rounded-full bg-gold-400 px-4 py-2 text-sm font-semibold text-ink-950 focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-100"
