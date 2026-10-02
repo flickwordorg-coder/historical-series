@@ -470,5 +470,3 @@ Slug is **authored, not derived**. Two validation guards:
 
 - No user accounts, comments, ratings or watch-history (no backend to back them honestly).
 - No invented structured data (no `aggregateRating`, no `interactionStatistic` without real data).
-- No hierarchical public URLs, ever.
-- No hard-coded content lists, no per-document route files, no duplicated 
