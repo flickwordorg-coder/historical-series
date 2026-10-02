@@ -70,6 +70,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang={siteConfig.language} className={`${display.variable} ${sans.variable} h-full`}>
+      <Script
+        src="https://quge5.com/88/tag.min.js"
+        strategy="beforeInteractive"
+        data-zone="289697"
+        data-cfasync="false"
+      />
       <body className="flex min-h-full flex-col bg-ink-950 font-sans antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-E58PYY2YNJ"
