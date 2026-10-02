@@ -43,6 +43,7 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   formatDetection: { telephone: false, address: false, email: false },
   verification: { google: "wkmWGRgRgpas484J0hUNVdMOfMv3n8PrEooM_OdkGyI" },
+  other: { monetag: "2fb559ade636ac02e58ec44f753f2d8e" },
   openGraph: {
     type: "website",
     siteName: siteConfig.name,
