@@ -469,4 +469,4 @@ Slug is **authored, not derived**. Two validation guards:
 ## 5. Non-goals
 
 - No user accounts, comments, ratings or watch-history (no backend to back them honestly).
-- No invented structured data (no `aggregateRating`, no `interactionStatistic` without real data).
+
